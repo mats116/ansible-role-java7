@@ -1,0 +1,9 @@
+- name: install java
+  apt:
+    name: "{{ item }}"
+    state: latest
+    force: yes
+  with_items:
+    - openjdk-7-jdk
+    - openjdk-7-jre
+    - openjdk-7-jre-headless
